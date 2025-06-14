@@ -9,7 +9,7 @@ body {
     font-family: "Courier New", Courier, monospace;;
 }
 
-h1 {
+#companyLogo {
     margin: 50px 0 0 50px;
     height: 175px;
     background-image: url("../assets/images/chp01-constructive-logo.gif");
@@ -40,11 +40,11 @@ h3 {
     line-height: 0.80em;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    border-left: 1px solid#bcbdc0;
-    border-right: 1px solid#bcbdc0;
+    border-left: 1px solid #bcbdc0;
+    border-right: 1px solid #bcbdc0;
 }
 
-h1, h3, p {
+#companyLogo, h3, p, a {
     float: left;
     clear: left;
     width: 320px;
@@ -55,4 +55,17 @@ h1, h3, p {
 
 em {
     font-style: italic;
+}
+
+a {
+    margin: 0 0 0 50px;
+    padding: 25px 0 10px 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 0.80em;
+    letter-spacing: -0.02em;
+    border-left: 1px solid #bcbdc0;
+    border-right: 1px solid #bcbdc0;
+    border-bottom: 1px solid #bcbdc0;
 }
