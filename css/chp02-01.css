@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#page-container {
+    background-image: url("../assets/images/chp02-hobart.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 50px;
+    width: calc(100vw - 100px);
+    height: calc(100vh - 100px);
+    background-color: white;
+}
+
+.button-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    width: auto;
+    background-color: #0aa696;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: left;
+    float: right;
+    font-size: 16px;
+}
+
+h1 {
+    width: 278px;
+    height: 112px;
+    margin: 8px auto 0 auto;
+    padding-top: 40px;
+    background: url("../assets/images/chp02-elderflower-logo.png") no-repeat bottom center;
+    /*background-repeat: no-repeat;*/
+}
+
+#content {
+    background-color: #fff;
+    border: 3px double #31373f;
+    color: #31373f;
+    /*display: inline-block;*/
+    padding: 30px 50px;
+    margin: 70px auto 50px auto;
+    max-width: 700px;
+    min-height: 10em;
+    overflow: auto;
+    text-align: center;
+}
+
+h2 {
+    width: 286px;
+    height: 18px;
+    margin: 8px auto 20px auto;
+    background: url("../assets/images/chp02-custom-sign.png") no-repeat center center;
+}
+
+#cost {
+    position: relative;
+    top: 1.6em;
+    right: 7em;
+    background-color: #f84c53;
+    color: #fff;
+    min-width: 20px;
+    width: auto;
+    height: auto;
+    padding: 0.5em 0.75em;
+    float: right;
+}
+
+#preview-img {
+    margin-top: 40px;
+}
