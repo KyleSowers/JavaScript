@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dedad9;
+    color: #352e2f;
+}
+
+#main_chp_page_div {
+    background-color: #dedad9;
+    /*border: 3px solid black;*/
+    margin: 50px 80px;
+    height: 100vh;
+}
+
+.button-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    width: auto;
+    background-color: #0aa696;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: left;
+    float: right;
+    font-size: 16px;
+}
+
+#h2-header {
+    font-weight: normal;
+    font-size: 2.4em;
+    line-height: 1.3em;
+    /*margin-bottom: 0.5em;*/
+    padding-top: 40px;
+    margin-left: 1em;
+    box-sizing: border-box;
+    display: block;
+}
+
+table {
+    display: table;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-color: grey;
+
+}
+
+#activity-links {
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: 100%;
+    margin: 4em auto;
+    /*margin-bottom: 4em;*/
+    /*margin-top: 2em;*/
+    /*box-sizing: border-box;*/
+}
+
+#activity-links td {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+tbody {
+    display: table-row-group;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+
+td {
+    display: table-cell;
+    /*border: 3px solid black;*/
+}
