@@ -46,7 +46,7 @@ table {
     text-indent: initial;
     unicode-bidi: isolate;
     border-color: grey;
-
+    font-size: 24px;
 }
 
 #activity-links {
@@ -62,7 +62,7 @@ table {
 #activity-links td {
     background-color: #fff;
     padding: 10px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 tbody {
@@ -81,10 +81,30 @@ tr {
 th {
     display: table-cell;
     vertical-align: top;
-    text-align: center;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10px;
 }
 
 td {
     display: table-cell;
     /*border: 3px solid black;*/
 }
+
+.pg-number {
+    font-weight: normal;
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    text-align: left;
+}
+
+.html-cell, .activity-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #0aa696;
+}
+
+
