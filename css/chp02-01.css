@@ -48,7 +48,7 @@ h1 {
 
 #content {
     background-color: #fff;
-    border: 3px double #31373f;
+    border: 5px double #31373f;
     color: #31373f;
     /*display: inline-block;*/
     padding: 30px 50px;
@@ -81,4 +81,21 @@ h2 {
 
 #preview-img {
     margin-top: 40px;
+}
+
+/*chp02-02 exclusive*/
+#welcome-message {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#note {
+    background-color: #31373f;
+    border-radius: 0.5em;
+    color: #e3bb5a;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 200%;
 }
