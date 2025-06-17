@@ -130,7 +130,7 @@ a {
     background-color: red;
 }
 
-.colorTitle {
+.colorTitle, .welcome-message {
     margin-top: 40px;
     font-size: 350%;
 }
