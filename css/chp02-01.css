@@ -129,3 +129,8 @@ a {
 .false {
     background-color: red;
 }
+
+.colorTitle {
+    margin-top: 40px;
+    font-size: 350%;
+}
