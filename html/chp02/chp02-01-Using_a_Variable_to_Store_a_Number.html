@@ -15,6 +15,21 @@
         <div id="cost"></div>
         <img id="preview-img" src="../../assets/images/chp02-preview.jpg" alt="Display of desired letters as tiles">
       </div>
+      <a class="button-link button-link-js" href="javascript:void(0)">Show JavaScript</a>
+      <div id="js-popup">
+          <pre>
+              var price;
+              var quantity;
+              var total;
+
+              price = 5;
+              quantity = 14;
+              total = price * quantity;
+
+              var el = document.getElementById("cost");
+              el.textContent = '$' + total;
+          </pre>
+      </div>
   </div>
 
     <script src="../../JavaScript/chp02/chp02-01.js"></script>

@@ -8,3 +8,8 @@ total = price * quantity;
 
 var el = document.getElementById("cost");
 el.textContent = '$' + total;
+
+document.querySelector('.button-link-js').addEventListener("click", function () {
+    var popup = document.getElementById("js-popup");
+    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+});
