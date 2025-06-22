@@ -9,6 +9,7 @@ body {
 }
 
 #page-container {
+    position: relative;
     background-image: url("../assets/images/chp02-hobart.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,19 +50,15 @@ body {
 }
 
 .button-link-js {
-    /*display: inline-block;*/
+    position: absolute;
+    left: 150px;
+    bottom: 120px;
+}
+
+.button-link-js-2 {
     position: absolute;
     right: 150px;
     bottom: 120px;
-    /*right: 120px;*/
-    /*padding: 10px;*/
-    /*background-color: white;*/
-    /*color: #fff;*/
-    /*border-radius: 5px;*/
-    /*font-weight: bold;*/
-    /*text-decoration: none;*/
-    /*cursor: pointer;*/
-    /*font-size: 16px;*/
 }
 
 h1 {
@@ -216,20 +213,37 @@ td {
     /*border: 3px solid black;*/
 }
 
-#js-popup {
+.js-popup {
     display: none;
-    position: fixed;
+    position: absolute;
     bottom: auto;
-    right: auto;
-    left: auto;
+    right: 22%;
     background-color: #fff;
     border: 2px solid #31373f;
     padding: 15px;
-    width: fit-content;
+    max-width: 800px;
     max-height: fit-content;
-    overflow-y: auto;
+    overflow: auto;
     font-family: monospace;
     font-size: 14px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
 }
+
+#popup-1 {
+    /*position: absolute;*/
+    bottom: 20px;
+    left: 19%;
+}
+
+#popup-2 {
+    /*position: absolute;*/
+    bottom: 60px;
+    right: 22%;
+}
+
+pre{
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
