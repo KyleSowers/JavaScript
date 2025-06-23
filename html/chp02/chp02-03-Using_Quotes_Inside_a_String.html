@@ -14,8 +14,56 @@
       <div id="title"></div>
       <div id="note"></div>
     </div>
+    <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+    <div class="js-popup" id="popup-1">
+      <pre>
+&lt;div id="page-container"&gt;
+  &lt;a class="button-link" href="chp02-main.html"&gt;Chapter 2: Basic JavaScript Instructions&lt;/a&gt;
+  &lt;h1&gt;&lt;/h1&gt;
+  &lt;div id="content"&gt;
+    &lt;div id="title"&gt;&lt;/div&gt;
+    &lt;div id="note"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)"&gt;Show HTML&lt;/a&gt;
+  &lt;div class="js-popup" id="popup-1"&gt;
+    &lt;pre&gt;...&lt;/pre&gt;
+  &lt;/div&gt;
+  &lt;a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)"&gt;Show JavaScript&lt;/a&gt;
+  &lt;div class="js-popup" id="popup-2"&gt;
+    &lt;pre&gt;...&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+    </div>
+    <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+    <div class="js-popup" id="popup-2">
+        <pre>
+var title;
+var message;
+
+title = "Molly's Special Offers";
+message = '<a href="#">25% Off!</a>'
+
+var elTitle = document.getElementById("title");
+elTitle.innerHTML = title;
+var elNote = document.getElementById("note");
+elNote.innerHTML = message;
+
+document.querySelectorAll(".button-link").forEach(function (btn) {
+    btn.addEventListener("click", function() {
+        var popupSelector = btn.getAttribute("data-popup");
+        var popup = document.querySelector(popupSelector);
+        if (popup) {
+            popup.style.display = (popup.style.display === "block") ? "none" : "block";
+        }
+    });
+});
+        </pre>
+    </div>
+
   </div>
 
   <script src="../../JavaScript/chp02/chp02-03.js"></script>
+  <script src="../../JavaScript/popup-html-js-code.js"></script>
 </body>
 </html>
