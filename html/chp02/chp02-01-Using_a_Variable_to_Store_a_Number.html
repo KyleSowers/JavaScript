@@ -26,14 +26,6 @@
         &lt;div id="cost"&gt;&lt;/div&gt;
         &lt;img id="preview-img" src="../../assets/images/chp02-preview.jpg" alt="Display of desired letters as tiles"&gt;
     &lt;/div&gt;
-    &lt;a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)"&gt;Show HTML&lt;/a&gt;
-    &lt;div class="js-popup" id="popup-1"&gt;
-        &lt;pre&gt;...&lt;/pre&gt;
-    &lt;/div&gt;
-    &lt;a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)"&gt;Show JavaScript&lt;/a&gt;
-    &lt;div class="js-popup" id="popup-2"&gt;
-        &lt;pre&gt;...&lt;/pre&gt;
-    &lt;/div&gt;
 &lt;/div&gt;
           </pre>
       </div>
@@ -50,16 +42,6 @@ total = price * quantity;
 
 var el = document.getElementById("cost");
 el.textContent = '$' + total;
-
-document.querySelectorAll(".button-link").forEach(function (btn) {
-    btn.addEventListener("click", function() {
-        var popupSelector = btn.getAttribute("data-popup");
-        var popup = document.querySelector(popupSelector);
-        if (popup) {
-            popup.style.display = (popup.style.display === "block") ? "none" : "block";
-        }
-    });
-});
           </pre>
       </div>
   </div>
