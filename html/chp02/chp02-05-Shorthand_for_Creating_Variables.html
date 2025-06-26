@@ -18,13 +18,13 @@
       <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
       <div class="js-popup" id="popup-1">
         <pre>
-&lt;div id="page-container"&gt;
-  &lt;a class="button-link" href="chp02-main.html"&gt;Chapter 2: Basic JavaScript Instructions&lt;/a&gt;
-  &lt;h1&gt;&lt;/h1&gt;
-  &lt;div id="content"&gt;
-    &lt;h2&gt;&lt;/h2&gt;
-    &lt;div id="cost"&gt;&lt;/div&gt;
-    &lt;img id="preview-img" src="../../assets/images/chp02-preview.jpg" alt="Display of tiles"&gt;
+&lt;div id="page-container"&gt; <span class="color-grey">//background image</span>
+  &lt;a class="button-link" href="chp02-main.html"&gt;Chapter 2: Basic JavaScript Instructions&lt;/a&gt; <span class="color-grey">//return button</span>
+  &lt;h1&gt;&lt;/h1&gt; <span class="color-grey">//img: Elderflower Logo</span>
+  &lt;div id="content"&gt; <span class="color-grey">//content box</span>
+    &lt;h2&gt;&lt;/h2&gt; <span class="color-grey">//img: Custom Signage</span>
+    &lt;div id="cost"&gt;&lt;/div&gt; <span class="color-grey">//js displays cost</span>
+    &lt;img id="preview-img" src="../../assets/images/chp02-preview.jpg" alt="Display of tiles"&gt; <span class="color-grey">//img: tiles</span>
   &lt;/div&gt;
 &lt;/div&gt;
         </pre>
@@ -34,18 +34,22 @@
         <pre>
 <span class="color-grey">//Shorthand for Creating Variables</span>
 
+<span class="color-grey">//declare/assign variable</span>
 // var price = 5;
 // var quantity = 14;
 // var total = price * quantity;
 
+<span class="color-grey">//shorthand declare/assign variable</span>
 // var price, quantity, total;
 // price = 5;
 // quantity = 14;
 // total = price * quantity;
 
+<span class="color-grey">//shorthand declare/assign variable</span>
 var price = 5, quantity = 14;
 var total = price * quantity;
 
+<span class="color-grey">//call/assign id attribute, displays result to page</span>
 var el = document.getElementById("cost");
 el.textContent = "$" + total;
         </pre>

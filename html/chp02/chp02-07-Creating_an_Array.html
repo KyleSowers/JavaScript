@@ -18,12 +18,12 @@
     <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
     <div class="js-popup" id="popup-1">
         <pre>
-&lt;div id="page-container"&gt;
-  &lt;a class="button-link" href="chp02-main.html"&gt;Chapter 2: Basic JavaScript Instructions&lt;/a&gt;
-  &lt;h1&gt;&lt;/h1&gt;
-  &lt;div id="content"&gt;
+&lt;div id="page-container"&gt; <span class="color-grey">//background image</span>
+  &lt;a class="button-link" href="chp02-main.html"&gt;Chapter 2: Basic JavaScript Instructions&lt;/a&gt; <span class="color-grey">//return button</span>
+  &lt;h1&gt;&lt;/h1&gt; <span class="color-grey">//img: Elderflower Logo</span>
+  &lt;div id="content"&gt; <span class="color-grey">//content box</span>
     &lt;div class="title colorTitle"&gt;Color:
-        &lt;span id="colors"&gt;&lt;/span&gt;
+        &lt;span id="colors"&gt;&lt;/span&gt; <span class="color-grey">//js: display color</span>
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -32,13 +32,20 @@
     <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
     <div class="js-popup" id="popup-2">
         <pre>
+<span class="color-grey">//Creating an Array</span>
+
+<span class="color-grey">//declare variable</span>
 var colors;
+
+<span class="color-grey">//Assign variable Array list</span>
 colors = ['white', 'black', 'custom'];
 
+<span class="color-grey">//Alternative method: shorthand</span>
 // var colors = new Array('white', 'black', 'custom');
 
+<span class="color-grey">//call/assign id attribute to display result to page</span>
 var el = document.getElementById('colors');
-el.textContent = colors[0];
+el.textContent = colors[0]; <span class="color-grey">//select array index to display</span>
         </pre>
     </div>
   </div>
