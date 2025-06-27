@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/chp03-01.css">
+    <title>A Basic Function</title>
+</head>
+<body>
+    <div id="page-container"> <!-- provide background img-->
+        <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+        <h1>TravelWorthy</h1>
+        <div id="message"></div> <!-- js: function returns message content from script -->
+        <!-- Display HTML to viewer to review -->
+        <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+        <!-- display on button click event -->
+        <div class="js-popup" id="popup-1">
+              <pre>
+&lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
+    &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
+    &lt;h1&gt;&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
+    &lt;div id="message"&gt;  <span class="color-green">//js: function provides message</span>&lt;/div&gt;
+&lt;/div&gt;
+              </pre>
+        </div>
+        <!-- Display JavaScript to viewer to review -->
+        <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+        <!-- display on button click event -->
+        <div class="js-popup" id="popup-2">
+          <pre>
+<span class="color-green">// A Basic Function</span>
+
+<span class="color-green">// Create a variable called msg to hold a new message</span>
+var msg = "Sign up to receive our newsletter for 10% off!";
+
+<span class="color-green">// Create a function to update the content of the element whose id attribute has a value of message</span>
+function updateMessage() {
+    <span class="color-green">// function statements</span>
+    var el = document.getElementById("message");
+    el.textContent = msg;
+}
+
+<span class="color-green">// call method</span>
+updateMessage();
+              </pre>
+        </div>
+    </div>
+
+    <script src="../../JavaScript/chp03/chp03-01.js"></script>
+    <script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
