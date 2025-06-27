@@ -6,6 +6,7 @@ body {
     /*display: flex;*/
     /*justify-content: center;*/
     /*align-content: center;*/
+    font-family: 'Open Sans', sans-serif;
 }
 
 #page-container {
@@ -66,6 +67,22 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin: 1.75em 0 0 0;
+    color: #adffda;
+    font-weight: normal;
+    /*margin-block-start: 0.83em;*/
+    /*margin-block-end: 0.83em;*/
+    /*margin-inline-start: 0px;*/
+    /*margin-inline-end: 0px;*/
+}
+
+p + p {
+    margin: 0;
+}
+
 #message {
     float: left;
     clear: left;
@@ -76,6 +93,18 @@ h1 {
     text-align: center;
     font-size: 16px;
     font-family: Arial, serif;
+}
+
+#info {
+    background-color: #1e1b1e;
+    color: #fff;
+    width: 200px;
+    padding: 0 15px;
+    text-align: center;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 25%;
 }
 
 .js-popup {
@@ -115,4 +144,22 @@ pre{
 .color-green {
     color: green;
 }
+
+#hotelName {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 120%;
+    margin-top: 10px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+}
+
+#rooms {
+    font-size: 440%;
+    color: #ffb87a;
+    display: inline-block;
+    margin: 0;
+}
+
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp03-01.css">
+  <title>A Basic Function</title>
+</head>
+<body>
+<div id="page-container"> <!-- provides background img-->
+  <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+  <h1>TravelWorthy</h1> <!-- CSS provides TravelWorthy logo-->
+  <div id="info"> <!-- creates info container-->
+    <h2>hotel availability</h2>
+    <div id="hotelName"></div> <!-- js: provides hotel objects name-->
+    <div id="availability">
+      <p id="rooms"></p> <!-- js: uses hotel objects method returning number of available rooms-->
+      <p>rooms left</p>
+    </div>
+  </div>
+  <!-- Display HTML code to viewer in popup to review -->
+  <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+  <!-- display on button click event -->
+  <div class="js-popup" id="popup-1">
+              <pre>
+&lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
+    &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
+    &lt;h1&gt;TravelWorthy&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
+    &lt;div id="info"&gt;  <span class="color-green">//availability info container</span>
+        &lt;h2&gt;hotel availability&lt;/h2&gt;
+        &lt;div id="hotelName"&gt;&lt;/div&gt;  <span class="color-green">//js: calls/displays hotel object's name value to matching id "hotelName"</span>
+        &lt;div id="availability"&gt;
+            &lt;p id="rooms"&gt;&lt;/p&gt;  <span class="color-green">//js: calls/displays hotel object's checkAvailability method, returning number of available rooms to matching id "rooms"</span>
+            &lt;p&gt;rooms left&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+              </pre>
+  </div>
+  <!-- Display JavaScript code to viewer in popup to review on click event-->
+  <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+  <!-- display on button click event -->
+<div class="js-popup" id="popup-2">
+          <pre>
+<span class="color-green">//Creating Objects Using Literal Notation</span>
+
+<span class="color-green">// Create an object called hotel with key value pairs for hotel name, number of total rooms, and rooms booked, and also a method that returns available rooms </span>
+var hotel = {
+    name: 'Quay',
+    rooms: 40,
+    booked: 25,
+    checkAvailability: function() {
+        return this.rooms - this.booked;
+    }
+};
+
+<span class="color-green">//call/assign id "hotelName" to display hotel object's name result to page</span>
+var elName = document.getElementById("hotelName");
+elName.textContent = hotel.name;
+
+<span class="color-green">//call/assign id "rooms" to display hotel object's checkAvailability method result to page</span>
+var elRooms = document.getElementById("rooms");
+elRooms.textContent = hotel.checkAvailability();
+
+              </pre>
+  </div>
+</div>
+
+<script src="../../JavaScript/chp03/chp03-02.js"></script>
+<script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
