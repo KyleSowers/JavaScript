@@ -7,22 +7,22 @@
     <title>Creating More Object Literals</title>
 </head>
 <body>
-<div id="page-container"> <!-- provides background img-->
-    <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
-    <h1>TravelWorthy</h1> <!-- CSS provides TravelWorthy logo-->
-    <div id="info"> <!-- creates info container-->
-        <h2>hotel availability</h2>
-        <div id="hotelName"></div> <!-- js: provides hotel objects name-->
-        <div id="availability">
-            <p id="rooms"></p> <!-- js: uses hotel objects method returning number of available rooms-->
-            <p>rooms left</p>
+    <div id="page-container"> <!-- provides background img-->
+        <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+        <h1>TravelWorthy</h1> <!-- CSS provides TravelWorthy logo-->
+        <div id="info"> <!-- creates info container-->
+            <h2>hotel availability</h2>
+            <div id="hotelName"></div> <!-- js: provides hotel objects name-->
+            <div id="availability">
+                <p id="rooms"></p> <!-- js: uses hotel objects method returning number of available rooms-->
+                <p>rooms left</p>
+            </div>
         </div>
-    </div>
-    <!-- Display HTML code to viewer in popup to review -->
-    <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
-    <!-- display on button click event -->
-    <div class="js-popup" id="popup-1">
-              <pre>
+        <!-- Display HTML code to viewer in popup to review -->
+        <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+        <!-- display on button click event -->
+        <div class="js-popup" id="popup-1">
+                  <pre>
 &lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
     &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
     &lt;h1&gt;TravelWorthy&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
@@ -35,13 +35,13 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-              </pre>
-    </div>
-    <!-- Display JavaScript code to viewer in popup to review on click event-->
-    <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
-    <!-- display on button click event -->
-    <div class="js-popup" id="popup-2">
-          <pre>
+                  </pre>
+        </div>
+        <!-- Display JavaScript code to viewer in popup to review on click event-->
+        <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+        <!-- display on button click event -->
+        <div class="js-popup" id="popup-2">
+              <pre>
 <span class="color-green">//Creating Objects Using Literal Notation</span>
 <span class="color-green">// creates object using the previous activities literal notation, representing a different hotel object than the last, like a different page of the same travel website</span>
 
@@ -63,11 +63,11 @@ elName.textContent = hotel.name;
 var elRooms = document.getElementById("rooms");
 elRooms.textContent = hotel.checkAvailability();
 
-              </pre>
+                  </pre>
+        </div>
     </div>
-</div>
 
-<script src="../../JavaScript/chp03/chp03-03.js"></script>
-<script src="../../JavaScript/popup-html-js-code.js"></script>
+    <script src="../../JavaScript/chp03/chp03-03.js"></script>
+    <script src="../../JavaScript/popup-html-js-code.js"></script>
 </body>
 </html>
