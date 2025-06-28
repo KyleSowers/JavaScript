@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp03-01.css">
+  <title>Create & Access Objects Constructor Notation</title>
+</head>
+<body>
+  <div id="page-container"> <!-- provides background img-->
+    <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+    <h1>TravelWorthy</h1> <!-- CSS provides TravelWorthy logo-->
+    <div id="info"> <!-- creates info container-->
+      <h2>hotel availability</h2>
+      <div id="hotel1"></div> <!-- js: provides hotel objects name-->
+      <div id="hotel2"></div>
+    </div>
+    <!-- Display HTML code to viewer in popup to review -->
+    <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+    <!-- display on button click event -->
+    <div class="js-popup" id="popup-1">
+                  <pre>
+&lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
+    &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
+    &lt;h1&gt;TravelWorthy&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
+    &lt;div id="info"&gt;  <span class="color-green">//availability info container</span>
+        &lt;h2&gt;hotel availability&lt;/h2&gt;
+        &lt;div id="hotel1"&gt;&lt;/div&gt;  <span class="color-green">//js: calls/displays hotel object's name & room availability to matching id "hotel1"</span>
+        &lt;div id="hotel2"&gt;&lt;/div&gt; <span class="color-green">//js: calls/displays hotel object's name & room availability to matching id "hotel2"</span>
+    &lt;/div&gt;
+&lt;/div&gt;
+                  </pre>
+    </div>
+    <!-- Display JavaScript code to viewer in popup to review on click event-->
+    <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+    <!-- display on button click event -->
+    <div class="js-popup" id="popup-2">
+                  <pre>
+<span class="color-green">//Creating Objects Using Constructor Syntax</span>
+
+<span class="color-green">// Creates an function template to create hotel objects with properties and a method</span>
+function hotel(name, rooms,booked) {
+    this.name = 'Park';
+    this.rooms = 120;
+    this.booked = 44;
+    this.checkAvailability: function() {
+        return this.rooms - this.booked;
+    }
+}
+
+<span class="color-green">//creates 2 instances of the hotel object</span>
+var quayHotel = new Hotel('quay', 40, 25);
+var parkHotel = new Hotel('park', 120, 77);
+
+<span class="color-green">//call/assign id "hotel1" to display hotel object's name and availability result to page</span>
+var details1 = quayHotel.name + ' rooms: ';
+    details1 += quayHotel.checkAvailability();
+var elHotel1 = document.getElementById("hotel1");
+elHotel1.textContent = details1;
+
+<span class="color-green">//call/assign id "hotel2" to display hotel object's name and availability result to page</span>
+var details2 = quayHotel.name + ' rooms: ';
+    details2 += quayHotel.checkAvailability();
+var elHotel2 = document.getElementById("hotel2");
+elHotel2.textContent = details2;
+
+                  </pre>
+    </div>
+  </div>
+
+  <script src="../../JavaScript/chp03/chp03-05.js"></script>
+  <script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
