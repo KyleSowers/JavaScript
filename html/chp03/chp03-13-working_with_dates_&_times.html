@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp03-01.css">
+  <title>Working with Dates & Times</title>
+</head>
+<body>
+    <div id="page-container"> <!-- provide background img-->
+      <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+      <h1>TravelWorthy</h1>
+      <div id="message"></div> <!-- js: function returns message content from script -->
+      <!-- Display HTML to viewer to review -->
+      <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+      <!-- display on button click event -->
+      <div class="js-popup" id="popup-1">
+                  <pre>
+    &lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
+        &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
+        &lt;h1&gt;&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
+        &lt;div id="message"&gt;  <span class="color-green">//js: function provides message with the years of service, after creating a Date() object, getting todays date and establishing the company start date, then factoring the difference in time since company start date</span>&lt;/div&gt;
+    &lt;/div&gt;
+                  </pre>
+      </div>
+      <!-- Display JavaScript to viewer to review -->
+      <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+      <!-- display on button click event -->
+      <div class="js-popup" id="popup-2">
+              <pre>
+<span class="color-green">// Working with Dates & Times</span>
+
+<span class="color-green">// Create a variable to hold a new Date object (defaults to now)</span>
+var today = new Date();
+<span class="color-green">// Get the year this year</span>
+var year = today.getFullYear();
+<span class="color-green">// Set the date that the company was established</span>
+var est = new Date('Apr 16, 1996 15:45:55');
+<span class="color-green">// Get difference between then & now in milliseconds</span>
+var difference = today.getTime() - est.getTime();
+<span class="color-green">// Divide by number of milliseconds to get years</span>
+difference = (difference / 31556900000);
+
+<span class="color-green">// Create a variable called elMsg to hold the element whose id attribute has a value of message and write the message into that element</span>
+var elMsg = document.getElementById('message');
+elMsg.textContent = Math.floor(difference) + ' years of online travel advice';
+                  </pre>
+      </div>
+    </div>
+
+    <script src="../../JavaScript/chp03/chp03-13.js"></script>
+    <script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
