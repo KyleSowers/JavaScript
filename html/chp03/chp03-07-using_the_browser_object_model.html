@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp03-01.css">
+  <title>Using the Browser Object Model</title>
+</head>
+<body>
+    <div id="page-container"> <!-- provides background img-->
+      <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+      <h1>TravelWorthy</h1> <!-- CSS provides TravelWorthy logo-->
+      <div id="info"></div> <!-- creates info container-->
+      <!-- Display HTML code to viewer in popup to review -->
+      <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+      <!-- display on button click event -->
+      <div class="js-popup" id="popup-1">
+                      <pre>
+&lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
+    &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
+    &lt;h1&gt;TravelWorthy&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
+    &lt;div id="info"&gt;&lt;/div&gt;  <span class="color-green">//info container:, js provides content to page, which examples many widow object requests for window information provided</span>
+&lt;/div&gt;
+                      </pre>
+      </div>
+      <!-- Display JavaScript code to viewer in popup to review on click event-->
+      <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+      <!-- display on button click event -->
+      <div class="js-popup" id="popup-2">
+                      <pre>
+<span class="color-green">//Using the Browser Object Model</span>
+
+<span class="color-green">// Create a variable called msg to hold a message that will be shown on the page</span>
+<span class="color-green">// Find the width of the browser window, and put this in the msg variable</span>
+var msg = '&lt;h2&gt;browser window&lt;/h2&gt;&lt;p&gt;width: ' + window.innerWidth + '&lt;/p&gt;';
+<span class="color-green">// Find the height of the window and add it to the msg variable</span>
+msg += '&lt;p&gt;height: ' + window.innerHeight + '&lt;/p&gt;';
+<span class="color-green">// Find the number of items in the browser window's history and add it to the msg variable</span>
+msg += '&lt;h2&gt;history&lt;/h2&gt;&lt;p&gt;items: ' + window.history.length + '&lt;/p&gt;';
+<span class="color-green">// Find the width of the computer screen and add it to the msg variable</span>
+msg += '&lt;h2&gt;screen&lt;/h2&gt;&lt;p&gt;width: ' + window.screen.width + '&lt;/p&gt;';
+<span class="color-green">// Find the height of the computer screen and add it to the msg variable</span>
+msg += '&lt;p&gt;height: ' + window.screen.height + '&lt;/p&gt;';
+
+<span class="color-green">// // Create a variable called el to hold the element whose id attribute has a value of info and write the message into that element</span>
+var el = document.getElementById('info');
+el.innerHTML = msg;
+
+<span class="color-green">// Find the location of the current page and display it in an alert box</span>
+alert('Current page: ' + window.location);
+                      </pre>
+      </div>
+    </div>
+
+    <script src="../../JavaScript/chp03/chp03-07.js"></script>
+    <script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
