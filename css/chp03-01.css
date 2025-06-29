@@ -195,4 +195,13 @@ pre{
     justify-content: center;
 }
 
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #adffda;
+    padding-left: 15px;
+}
+
 
