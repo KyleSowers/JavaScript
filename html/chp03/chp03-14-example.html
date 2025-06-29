@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp03-01.css">
+  <title>Chapter 3 Example</title>
+</head>
+<body>
+    <div id="page-container"> <!-- provides background img-->
+      <a class="button-link" href="chp03-main.html">Chapter 3: Functions, Methods & Objects</a> <!-- return to chapters main page -->
+      <h1>TravelWorthy</h1> <!-- CSS provides TravelWorthy logo-->
+      <div id="info"> <!-- creates info container-->
+        <h2>latest hotel offer</h2>
+        <div id="hotelName"></div> <!-- js: provides hotel objects name-->
+        <div id="roomRate"></div>
+        <div id="specialRate"></div>
+        <p>room rate when you book 2 or more nights</p>
+        <div id="offerEnds"></div>
+      </div>
+      <!-- Display HTML code to viewer in popup to review -->
+      <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+      <!-- display on button click event -->
+      <div class="js-popup" id="popup-1">
+                      <pre>
+&lt;div id="page-container"&gt;  <span class="color-green">//background image</span>
+    &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 3: Functions, Methods & Objects&lt;/a&gt;  <span class="color-green">//return button</span>
+    &lt;h1&gt;TravelWorthy&lt;/h1&gt;  <span class="color-green">//img: TravelWorthy Logo</span>
+    &lt;div id="info"&gt;  <span class="color-green">//availability info container</span>
+        &lt;h2&gt;latest hotel offer&lt;/h2&gt;
+        &lt;div id="hotelName"&gt;&lt;/div&gt;  <span class="color-green">//js: calls/displays hotel object's name</span>
+        &lt;div id="roomRate"&gt;&lt;/div&gt; <span class="color-green">//js: calls/displays hotel object's roomRate</span>
+        &lt;div id="specialRate"&gt;&lt;/div&gt; <span class="color-green">//js: calls/displays hotel object's specialRate</span>
+        &lt;p&gt;room rate when you book 2 or more nights&lt;/p&gt;
+        &lt;div id="offerEnds"&gt;&lt;/div&gt; <span class="color-green">//js: calls/displays hotel object's offerEnds message</span>
+    &lt;/div&gt;
+&lt;/div&gt;
+                      </pre>
+      </div>
+      <!-- Display JavaScript code to viewer in popup to review on click event-->
+      <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+      <!-- display on button click event -->
+      <div class="js-popup" id="popup-2">
+                  <pre>
+<span class="color-green">// Chapter 3 Example</span>
+<span class="color-green">/* the script is placed inside an immediately invoked function expression which helps protect the scope of variables */</span>
+(function () {
+    <span class="color-green">// PART ONE: CREATE HOTEL OBJECT & WRITE OUT THE OFFER DETAILS</span>
+
+    <span class="color-green">// create a hotel object using object literal syntax</span>
+    var hotel = {
+        name: 'Park',
+        roomRate: 240, <span class="color-green">// amount in dollars</span>
+        discount: 15, <span class="color-green">// percentage discount</span>
+        offerPrice: function () {
+            return ('$' + this.roomRate * ((100 - this.discount) / 100));
+        }
+    }
+
+    <span class="color-green">// write out the hotel name, standard rate, and the special rate</span>
+    var hotelName, roomRate, specialRate; // declare variables
+
+    hotelName = document.getElementById('hotelName'); <span class="color-green">// get elements</span>
+    roomRate = document.getElementById('roomRate');
+    specialRate = document.getElementById('specialRate');
+
+
+    hotelName.textContent = hotel.name; // <span class="color-green">// write hotel name</span>
+    roomRate.textContent = hotel.roomRate; <span class="color-green">// write room rate</span>
+    specialRate.textContent = hotel.offerPrice(); <span class="color-green">// the element that shows the message about the offer ending</span>
+
+    function offerExpires(today) {
+        <span class="color-green">// declare variables within the function for local scope</span>
+        var weekFromToday, day, date, month, year, dayNames, monthNames;
+        <span class="color-green">// add 7 days time (added in milliseconds)</span>
+        weekFromToday = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+        <span class="color-green">// create arrays to hold the names of days / months</span>
+        dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'October', 'November', 'December'];
+        <span class="color-green">// collect the parts of the date to show on the page</span>
+        day = dayNames[weekFromToday.getDay()];
+        date = weekFromToday.getDate();
+        month = monthNames[weekFromToday.getMonth()];
+        year = weekFromToday.getFullYear();
+        <span class="color-green">// create the message</span>
+        expiryMsg = 'Offer expires next ';
+        expiryMsg += day + ' <br />(' + date + ' ' + month + ' ' + year + ')';
+        return expiryMsg;
+    }
+
+    today = new Date(); <span class="color-green">// Put today's date in variable</span>
+    elEnds = document.getElementById('offerEnds'); <span class="color-green">// Get the offerEnds element</span>
+    elEnds.innerHTML = offerExpires(today); <span class="color-green">// Add the expiry message</span>
+
+<span class="color-green">// Finish the immediately invoked function expression</span>
+}());
+                      </pre>
+      </div>
+    </div>
+
+    <script src="../../JavaScript/chp03/chp03-14.js"></script>
+    <script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
