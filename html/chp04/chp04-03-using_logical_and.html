@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp04-01.css">
+  <title>Using Logical AND</title>
+</head>
+<body>
+  <div id="pageContainer">
+    <section id="page1">
+      <a class="button-link" href="chp04-main.html">Chapter 4: Decisions & Loops</a> <!-- return to chapters main page -->
+      <h1 id="bullseyeLogo">Bullseye</h1>
+      <img src="../../assets/images/chp04-teacher.png" id="teacher" alt="teacher">
+      <section id="answer"></section>
+    </section>
+    <!-- Display HTML to viewer to review -->
+    <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+    <!-- display on button click event -->
+    <div class="js-popup" id="popup-1">
+                      <pre>
+&lt;div id="pageContainer"&gt;  <span class="color-green">//background color</span>
+    &lt;section id='page1'&gt;  <span class="color-green">//upper background color</span>
+        &lt;a class="button-link" href="chp03-main.html"&gt;Chapter 4: Decisions & Loops&lt;/a&gt;  <span class="color-green">//return button</span>
+        &lt;h1 id="bullseyeLogo"&gt;Bullseye&lt;/h1&gt;  <span class="color-green">//img: Bullseye Logo</span>
+        &lt;img src="../../assets/images/chp04-teacher.png" id="teacher" alt="teacher"&gt;  <span class="color-green">//teacher image to page</span>&lt;/div&gt;
+        &lt;section id="answer"&gt;&lt;/section&gt;  <span class="color-green">//js: checks both of user's round scores using comparison and logical operators to determine if user passed both rounds, returns message result</span>
+    &lt;/section&gt;
+&lt;/div&gt;
+                      </pre>
+    </div>
+    <!-- Display JavaScript to viewer to review -->
+    <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+    <!-- display on button click event -->
+    <div class="js-popup" id="popup-2">
+                  <pre>
+<span class="color-green">// Comparing Two Expressions</span>
+
+<span class="color-green">// declare/assign variables</span>
+var score1 =8; // round 1 score
+var score2 = 8; // round 2 score
+var pass1 = 6; // round 1 pass mark
+var pass2 = 6; // round 2 pass mark
+
+<span class="color-green">// Check whether user passed both rounds, using the logical AND operator determining if both rounds passing is true, with comparison >= operators comparing each round scores individually to determine the logical operator's end result, stores result in variable</span>
+var passBoth = (score1 >= pass1) && (score2 >= pass2);
+
+<span class="color-green">// create message</span>
+var msg = 'Both rounds passed: ' + passBoth;
+
+<span class="color-green">// write the message into the page</span>
+var el = document.getElementById("answer");
+el.textContent = msg;
+                      </pre>
+    </div>
+  </div>
+
+  <script src="../../JavaScript/chp04/chp04-03.js"></script>
+  <script src="../../JavaScript/popup-html-js-code.js"></script>
+</body>
+</html>
