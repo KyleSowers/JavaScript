@@ -15,11 +15,15 @@ section {
     display: block;
 }
 
-#page1 {
+#page1, #page2{
     background-color: #fecc6f;
     height: 596px;
     padding: 10px;
     min-width: 779px;
+}
+
+#page2 {
+    height: 730px;
 }
 
 h1 {
@@ -41,6 +45,11 @@ img {
 #teacher {
     float: right;
     margin: 0 30px 0 0;
+}
+
+#teacher2 {
+    float: right;
+    margin: 135px 30px 0 0;
 }
 
 #answer {
@@ -121,4 +130,16 @@ pre{
 
 .color-green {
     color: green;
+}
+
+#blackboard {
+    background-color: #425a5a;
+    border: 25px solid #523620;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin:  0 auto;
+    height: 370px;
+    width: 600px;
+    text-align: center;
+    color: #fff;
 }
