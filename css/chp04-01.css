@@ -1,7 +1,124 @@
 body {
-    background-color: #532620;
-    color: #fff;
+    background-color: #523620;
     font-family: 'Wellfleet', times, serif;
     font-size: 150%;
     margin: 0;
+}
+
+#pageContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: #523620;
+}
+
+section {
+    display: block;
+}
+
+#page1 {
+    background-color: #fecc6f;
+    height: 596px;
+    padding: 10px;
+    min-width: 779px;
+}
+
+h1 {
+    background-image: url("../assets/images/chp04-bullseye-logo.png");
+    background-repeat: no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 109px;
+    width: 643px;
+    margin: 40px auto;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+#teacher {
+    float: right;
+    margin: 0 30px 0 0;
+}
+
+#answer {
+    border: 12px double #fff;
+    color: #523620;
+    padding: 20px;
+    margin: 70px auto 10px auto;
+    width: 250px;
+    text-align: center;
+}
+
+
+.button-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 10px;
+    width: auto;
+    background-color: #0aa696;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: left;
+    float: right;
+    font-size: 16px;
+}
+
+.button-link-js {
+    position: absolute;
+    left: 150px;
+    bottom: 120px;
+}
+
+.button-link-js-2 {
+    position: absolute;
+    right: 150px;
+    bottom: 120px;
+}
+.js-popup {
+    display: none;
+    position: absolute;
+    bottom: auto;
+    right: 22%;
+    background-color: #fff;
+    border: 2px solid #31373f;
+    padding: 5px;
+    max-width: 750px;
+    max-height: fit-content;
+    overflow: auto;
+    font-family: monospace;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#popup-1 {
+    /*position: absolute;*/
+    bottom: 1px;
+    left: 19%;
+}
+
+#popup-2 {
+    /*position: absolute;*/
+    bottom: 10px;
+    right: 22%;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+pre{
+    white-space: pre-wrap;
+    word-break: break-word;
+    /*color: black;*/
+}
+
+.color-green {
+    color: green;
 }
