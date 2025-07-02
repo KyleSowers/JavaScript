@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Oswald', 'Futura', sans-serif;
+}
+
+div {
+    display: block;
+}
+
+#page {
+    background-color: #403c3b;
+}
+
+h1 {
+    background-image: url("../assets/images/chp05-kinglogo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    text-indent: -1000%;
+    height: 75px;
+    line-height: 75px;
+    width: 117px;
+    margin: 0 auto 0 auto;
+    padding: 30px 10px 20px 10px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    margin: 0 0 23px 0;
+    padding-bottom: 8px;
+}
+
+ul {
+    background-color: #584f4d;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #ec8c68;
+    color: #fff;
+    border-top: 1px solid #fe9772;
+    border-bottom: 1px solid #9f593f;
+    font-size: 24px;
+    letter-spacing: .05em;
+    list-style-type: none;
+    text-shadow: 2px 2px 1px #9f593f;
+    height: 50px;
+    padding-left: 1em;
+    padding-top: 10px;
+}
+
+.hot {
+    background-color: #d7666b;
+    color: #fff;
+    text-shadow: 2px 2px 1px #914141;
+    border-top: 1px solid #e99295;
+    border-bottom: 1px solid #914141;
+}
+
+@media only screen and (min-width: 960px) {
+    #page {
+        max-width: 400px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    h1 {
+        background-image: url("../assets/images/chp05-kinglogo.png");
+        background-size: 72px 72px;
+    }
+}
+
