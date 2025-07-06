@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp_main.css">
+  <title>Main Page Chp06</title>
+</head>
+<body>
+<div id="main_chp_page_div">
+  <a class="button-link" href="chp06-main.html">Chapter 5: Events</a>
+  <h2 id="h2-header">Different Event Types</h2>
+  <div id="tableContainer">
+    <table id="activity-links">
+      <tbody>
+        <tr>
+          <th class="tableTitle">UI EVENTS</th>
+          <th class="tableTitleDescription">Occur when a user interacts with the browser's UI rather than the web page</th>
+        </tr>
+        <tr>
+          <th>EVENT</th>
+          <th>DESCRIPTION</th>
+        </tr>
+        <tr>
+          <td class="eventName">load</td>
+          <td class="eventDescription">Web page has finished loading</td>
+        </tr>
+        <tr>
+          <td class="eventName">unload</td>
+          <td class="eventDescription">Web page is unloading (usually because a new page was requested)</td>
+        </tr>
+        <tr>
+          <td class="eventName">error</td>
+          <td class="eventDescription">Browser encounters a JavaScript error or an asset doesn't exist</td>
+        </tr>
+        <tr>
+          <td class="eventName">resize</td>
+          <td class="eventDescription">Browser window has been resized</td>
+        </tr>
+        <tr>
+          <td class="eventName">scroll</td>
+          <td class="eventDescription">User has scrolled up or down the page</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="activity-links">
+      <tbody>
+      <tr>
+        <th class="tableTitle">KEYBOARD EVENTS</th>
+        <th class="tableTitleDescription">Occur when a user interacts with the keyboard (see also input event)</th>
+      </tr>
+      <tr>
+        <th>EVENT</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td class="eventName">keydown</td>
+        <td class="eventDescription">User first presses a key(repeats while key is depressed)</td>
+      </tr>
+      <tr>
+        <td class="eventName">keyup</td>
+        <td class="eventDescription">User releases a key</td>
+      </tr>
+      <tr>
+        <td class="eventName">keypress</td>
+        <td class="eventDescription">Character is being inserted (repeated while key is depressed</td>
+      </tr>
+      </tbody>
+    </table>
+    <table class="activity-links">
+      <tbody>
+      <tr>
+        <th class="tableTitle">MOUSE EVENTS</th>
+        <th class="tableTitleDescription">Occur when a user interacts with a mouse, trackpad, or touchscreen</th>
+      </tr>
+      <tr>
+        <th>EVENT</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td class="eventName">click</td>
+        <td class="eventDescription">User presses and releases a button over the same element</td>
+      </tr>
+      <tr>
+        <td class="eventName">dblclick</td>
+        <td class="eventDescription">User presses and releases a button twice over the same element</td>
+      </tr>
+      <tr>
+        <td class="eventName">mousedown</td>
+        <td class="eventDescription">BUser presses a mouse button while over an element</td>
+      </tr>
+      <tr>
+        <td class="eventName">mouseup</td>
+        <td class="eventDescription">User releases a mouse button while over an element</td>
+      </tr>
+      <tr>
+        <td class="eventName">mousemove</td>
+        <td class="eventDescription">User moves the mouse (not on a touchscreen)</td>
+      </tr>
+      <tr>
+        <td class="eventName">mouseover</td>
+        <td class="eventDescription">User moves the mouse over an element (not on a touchscreen)</td>
+      </tr>
+      <tr>
+        <td class="eventName">mouseout</td>
+        <td class="eventDescription">User moves the mouse off an element (not a touchscreen)</td>
+      </tr>
+      </tbody>
+    </table>
+    <table class="activity-links">
+      <tbody>
+      <tr>
+        <th class="tableTitle">FOCUS EVENTS</th>
+        <th class="tableTitleDescription">Occur when an element (e.g. a link or form field) gains or loses focus</th>
+      </tr>
+      <tr>
+        <th>EVENT</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td class="eventName">focus / focusin</td>
+        <td class="eventDescription">Element gains focus</td>
+      </tr>
+      <tr>
+        <td class="eventName">blur / focusout</td>
+        <td class="eventDescription">Element loses focus</td>
+      </tr>
+      </tbody>
+    </table>
+    <table class="activity-links">
+      <tbody>
+      <tr>
+        <th class="tableTitle">FORM EVENTS</th>
+        <th class="tableTitleDescription">Occur when a user interacts with a form element</th>
+      </tr>
+      <tr>
+        <th>EVENT</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td class="eventName">input</td>
+        <td class="eventDescription">Value in any &lt;input&gt; or &lt;textarea&gt; element has changed or any element with the contenteditable attribute</td>
+      </tr>
+      <tr>
+        <td class="eventName">change</td>
+        <td class="eventDescription">Value in a select box, checkbox, or radio button changes</td>
+      </tr>
+      <tr>
+        <td class="eventName">submit</td>
+        <td class="eventDescription">User submits a form (using a button or a key)</td>
+      </tr>
+      <tr>
+        <td class="eventName">reset</td>
+        <td class="eventDescription">User clicks on a form's reset button (rarely used)</td>
+      </tr>
+      <tr>
+        <td class="eventName">cut</td>
+        <td class="eventDescription">User cuts content from a form field</td>
+      </tr>
+      <tr>
+        <td class="eventName">copy</td>
+        <td class="eventDescription">User copies content from a form field</td>
+      </tr>
+      <tr>
+        <td class="eventName">paste</td>
+        <td class="eventDescription">User pastes content into a form field</td>
+      </tr>
+      <tr>
+        <td class="eventName">select</td>
+        <td class="eventDescription">User selects some text in a form field</td>
+      </tr>
+      </tbody>
+    </table>
+    <table class="activity-links">
+      <tbody>
+      <tr>
+        <th class="tableTitle">MUTATION EVENTS</th>
+        <th class="tableTitleDescription">Occur when DOM structure has been changed by a script</th>
+      </tr>
+      <tr>
+        <th>EVENT</th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td class="eventName">DOMSubtreeModified</td>
+        <td class="eventDescription">Change has been made to document</td>
+      </tr>
+      <tr>
+        <td class="eventName">DOMNodeInserted</td>
+        <td class="eventDescription">Node has been inserted as a direct child of another node</td>
+      </tr>
+      <tr>
+        <td class="eventName">DOMNodeRemoved</td>
+        <td class="eventDescription">Node has been removed from another node</td>
+      </tr>
+      <tr>
+        <td class="eventName">DOMNodeInsertedIntoDocument</td>
+        <td class="eventDescription">Node has been inserted as a descendant of another node</td>
+      </tr>
+      <tr>
+        <td class="eventName">DOMNodeRemovedFromDocument</td>
+        <td class="eventDescription">Node has been removed as a descendant of another node</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

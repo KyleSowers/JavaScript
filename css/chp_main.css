@@ -49,17 +49,17 @@ table {
     font-size: 24px;
 }
 
-#activity-links {
+#activity-links, .activity-links {
     border-collapse: separate;
     border-spacing: 5px;
     width: 100%;
-    margin: 4em auto;
+    margin: 1em auto;
     /*margin-bottom: 4em;*/
     /*margin-top: 2em;*/
     /*box-sizing: border-box;*/
 }
 
-#activity-links td {
+#activity-links td, .activity-links td {
     background-color: #fff;
     padding: 10px;
     /*text-align: center;*/
@@ -83,7 +83,22 @@ th {
     vertical-align: top;
     text-align: left;
     font-weight: normal;
+    font-size: 18px;
     padding-left: 10px;
+}
+
+.tableTitle {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+    font-weight: bold;
+    font-size:20px;
+    padding-left: 10px;
+}
+
+.tableTitleDescription {
+    font-size: 18px;
+    color: #777;
 }
 
 td {
@@ -105,6 +120,18 @@ td {
     font-weight: bold;
     text-decoration: none;
     color: #0aa696;
+}
+
+#tableContainer {
+    padding-bottom: 100px;
+}
+
+.eventName {
+    color: #0aa696;
+}
+
+.eventDescription {
+    font-size: 21px;
 }
 
 
