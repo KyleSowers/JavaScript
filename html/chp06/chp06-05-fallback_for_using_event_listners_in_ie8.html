@@ -45,14 +45,14 @@
     <!-- display on button click event -->
     <div class="js-popup" id="popup-2">
                           <pre>
-<span class="color-green">// Using Parameters With Event Handlers</span>
+<span class="color-green">// Fallback For Using Event Listeners In IE8</span>
 
 var elUsername = document.getElementById('username'); <span class="color-green">// get username input</span>
 var elMsg = document.getElementById('feedback'); <span class="color-green">// get feedback element</span>
 
-function checkUsername() { <span class="color-green">// declare function</span>
-    if (this.value.length < 5) { <span class="color-green">// if username is too short</span>
-        elMsg.textContent = 'Username must be 5 characters or more'; <span class="color-green">// set msg</span>
+function checkUsername(minLength) { <span class="color-green">// declare function</span>
+    if (this.value.length < minLength) { <span class="color-green">// if username is too short</span>
+        elMsg.textContent = 'Username must be ' + minLength + ' characters or more'; <span class="color-green">// set msg</span>
     } else { <span class="color-green">// otherwise</span>
         elMsg.textContent = ''; <span class="color-green">// clear message</span>
     }

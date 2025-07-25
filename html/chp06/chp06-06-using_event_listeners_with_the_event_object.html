@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp06-01.css">
+  <title>Using Event Listeners With The Event Object</title>
+</head>
+<body>
+  <a class="button-link" href="chp06-main.html">Chapter 6: Events</a>
+  <div id="page">
+    <h1 id="header">List King</h1>
+    <h2>New Account</h2>
+    <form method="post" action="#">
+      <label for="username">Create a username: </label>
+      <input type="text" id="username">
+      <div id="feedback"></div>
+      <label for="password">Create passowrd: </label>
+      <input type="text" id="password">
+      <input type="submit" value="sign up!">
+    </form>
+
+  </div>
+  <!-- Display HTML to viewer to review -->
+  <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+  <!-- display on button click event -->
+  <div class="js-popup" id="popup-1">
+                                <pre>
+&lt;div id="page"&gt;  <span class="color-green">// background container</span>
+    &lt;h1 id='header'&gt;List King&lt;/h1&gt;  <span class="color-green">// header image</span>
+    &lt;h2&gt;New Account&lt;/h2&gt;
+    &lt;form method="post" action="#"&gt;
+        &lt;label for="username"&gt;Create a username: &lt;/label&gt;
+        &lt;input type="text" id="username"&gt;
+        &lt;div id="feedback"&gt;&lt;/div&gt; <span class="color-green">// js: returns alert if username input is less than five characters</span>
+        &lt;label type="password"&gt;create password: &lt;/label&gt;
+        &lt;input type="text" id="password"&gt;
+        &lt;input type="submit" value="sign up!"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+                                </pre>
+  </div>
+  <!-- Display JavaScript to viewer to review -->
+  <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+  <!-- display on button click event -->
+  <div class="js-popup" id="popup-2">
+                            <pre>
+<span class="color-green">// Using Event Listeners With The Event Object</span>
+
+function checkLength(e, minLength) { <span class="color-green">// declare function</span>
+    var el, elMsg;  <span class="color-green">// declare variables</span>
+    if (!e) {  <span class="color-green">// if event object doesn't exist</span>
+        e = window.event;  <span class="color-green">// use IE fallback</span>
+    }
+    el = e.target || e.srcElement;  <span class="color-green">// get target of event</span>
+    elMsg = el.nextSibling <span class="color-green">// get its next sibling</span>
+
+    if (el.value.length < minlength) { <span class="color-green">// if length is too sort</span>
+        elMsg.textContent = 'Username must be 5 characters or more'; <span class="color-green">// set msg</span>
+    } else { <span class="color-green">// otherwise</span>
+        elMsg.textContent = ''; <span class="color-green">// clear message</span>
+    }
+}
+
+var elUsername = document.getElementById('username'); <span class="color-green">// get username input</span>
+if (elUsername.addEventListener) {  <span class="color-green">// if event listener supported</span>
+    elUsername.addEventListener('blur', function(e) {  <span class="color-green">// onblur event</span>
+        checkUsername(e, 5);  <span class="color-green">// call checkUsername()</span>
+    }, false);  <span class="color-green">// capture during bubble phase</span>
+} else {  <span class="color-green">// otherwise</span>
+    elUsername.attachEvent('onblur', function(e) {  <span class="color-green">// IE Fallback: onblur</span>
+        checkUsername(e, 5);  <span class="color-green">// call checkUsername()</span>
+    });
+}
+                                </pre>
+  </div>
+
+  <script src="../../JavaScript/popup-html-js-code.js"></script>
+  <script src="../../JavaScript/chp06/chp06-05.js"></script>
+
+</body>
+</html>
