@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp06-01.css">
+  <title>Using Event Delegation</title>
+</head>
+<body>
+  <a class="button-link" href="chp06-main.html">Chapter 6: Events</a>
+  <div id="page">
+    <h1 id="header">List King</h1>
+    <h2>Buy groceries</h2>
+    <ul id="shoppingList">
+      <li id="one" class="complete"><a href="itemDone.php?id=1">
+        <em>fresh</em>
+        " figs"</a>
+      </li>
+      <li id="two" class="complete"><a href="itemDone.php?id=2">pine nuts</a></li>
+      <li id="three" class="complete"><a href="itemDone.php?id=3">honey</a></li>
+      <li id="four" class="complete"><a href="itemDone.php?id=4">balsamic vinegar</a></li>
+    </ul>
+  </div>
+  <!-- Display HTML to viewer to review -->
+  <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+  <!-- display on button click event -->
+  <div class="js-popup" id="popup-1">
+                                <pre>
+&lt;div id="page"&gt;  <span class="color-green">// background container</span>
+    &lt;h1 id='header'&gt;List King&lt;/h1&gt;  <span class="color-green">// header image</span>
+    &lt;h2&gt;New Account&lt;/h2&gt;
+    &lt;ul id="shoppingList"&gt;
+        &lt;li class="complete"&gt;&lt;a href="itemDone.php?id=1"&gt;&lt;em&gt;fresh&lt;/em&gt; figs&lt;/a&gt; &lt;/li&gt;
+        &lt;li class="complete"&gt;&lt;a href="itemDone.php?id=2"&gt;pine nuts&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="complete"&gt;&lt;a href="itemDone.php?id=3"&gt;honey&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="complete"&gt;&lt;a href="itemDone.php?id=4"&gt;balsamic vinegar&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                </pre>
+  </div>
+  <!-- Display JavaScript to viewer to review -->
+  <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+  <!-- display on button click event -->
+  <div class="js-popup" id="popup-2">
+                            <pre>
+<span class="color-green">// Using Event Delegation</span>
+
+function getTarget(e) {  <span class="color-green">// declare function</span>
+    if (!e) {  <span class="color-green">// if there is no event object</span>
+        e = window.event;  <span class="color-green">// use old IE event object</span>
+    }
+    return e.target || e.srcElement  <span class="color-green">// get the target of event</span>
+}
+
+function itemDone(e) {  <span class="color-green">// declare function</span>
+     <span class="color-green">//  remove item from list</span>
+    var target, elParent, elGrandparent;  <span class="color-green">// declare variables</span>
+    target = getTarget(e);  <span class="color-green">// get the item clicked link</span>
+    elParent = target.parentNode;  <span class="color-green">// get its list item</span>
+    elGrandparent = target.parentNode.parentNode;  <span class="color-green">// get its list</span>
+
+    if (e.preventDefault) {  <span class="color-green">// if preventDefault() works</span>
+        e.preventDefault();  <span class="color-green">// use preventDefault()</span>
+    } else {  <span class="color-green">// otherwise</span>
+        e.returnValue = false;   <span class="color-green">// use old IE version</span>
+    }
+}
+
+var el = document.getElementById('shoppingList');  <span class="color-green">// get shopping list</span>
+if (el.addEventListener) {  <span class="color-green">// if event listener supported</span>
+    el.addEventListener('click', function(e) {  <span class="color-green">// click event</span>
+        itemDone(e);  <span class="color-green">// call itemDone()</span>
+    }, false);  <span class="color-green">// use bubbling phase for flow</span>
+} else {  <span class="color-green">// otherwise</span>
+    el.attachEvent('click', function(e) {  <span class="color-green">// IE Fallback: click</span>
+        itemDone(e);  <span class="color-green">// call itemDone()</span>
+    });
+}
+                                </pre>
+  </div>
+
+  <script src="../../JavaScript/popup-html-js-code.js"></script>
+  <script src="../../JavaScript/chp06/chp06-07.js"></script>
+
+</body>
+</html>
