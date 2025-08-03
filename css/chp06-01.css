@@ -79,6 +79,10 @@ input[type='submit'] {
     padding: 10px 0 0 22px;
 }
 
+#feedback.tip {
+    background-image: url("../assets/images/chp06-tip.png");
+}
+
 @media only screen and (min-width: 960px) {
     #page {
         max-width: 400px;

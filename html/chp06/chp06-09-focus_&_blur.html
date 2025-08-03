@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp06-01.css">
+  <title>UFocus & Blur</title>
+</head>
+<body>
+    <a class="button-link" href="chp06-main.html">Chapter 6: Events</a>
+    <div id="page">
+      <h1 id="header">List King</h1>
+      <h2>New Account</h2>
+      <form method="post" action="#">
+        <label for="username">Create a username: </label>
+        <input type="text" id="username">
+        <div id="feedback"></div>
+        <label for="password">Create passowrd: </label>
+        <input type="text" id="password">
+        <input type="submit" value="sign up!">
+      </form>
+
+    </div>
+    <!-- Display HTML to viewer to review -->
+    <a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+    <!-- display on button click event -->
+    <div class="js-popup" id="popup-1">
+                                    <pre>
+&lt;div id="page"&gt;  <span class="color-green">// background container</span>
+    &lt;h1 id='header'&gt;List King&lt;/h1&gt;  <span class="color-green">// header image</span>
+    &lt;h2&gt;New Account&lt;/h2&gt;
+    &lt;form method="post" action="#"&gt;
+        &lt;label for="username"&gt;Create a username: &lt;/label&gt;
+        &lt;input type="text" id="username"&gt;
+        &lt;div id="feedback"&gt;&lt;/div&gt; <span class="color-green">// js: returns alert/tip if username input is less than five characters</span>
+        &lt;label type="password"&gt;create password: &lt;/label&gt;
+        &lt;input type="text" id="password"&gt;
+        &lt;input type="submit" value="sign up!"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+                                    </pre>
+    </div>
+    <!-- Display JavaScript to viewer to review -->
+    <a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+    <!-- display on button click event -->
+    <div class="js-popup" id="popup-2">
+                                    <pre>
+<span class="color-green">// Focus & Blur</span>
+
+function checkUsername() { <span class="color-green">// declare function</span>
+    var username = el.value;  <span class="color-green">// store username in variable</span>
+    if (username.length < 5) {  <span class="color-green">// if username < 5</span>
+        elMsg.className = 'warning';  <span class="color-green">// change class on message</span>
+        elMsg.textContent = 'Not long enough, yet...';  <span class="color-green">// update message</span>
+    } else }  <span class="color-green">// otherwise</span>
+        elMsg.textContent = '';  <span class="color-green">// clear the message</span>
+}
+
+function tipUsername() { <span class="color-green">// declare function</span>
+    elMsg.className = 'tip';  <span class="color-green">// change class for message</span>
+    elMsg.innerHTML = 'Username must be at least 5 characters';  <span class="color-green">// add message</span>
+}
+
+var el = document.getElementById('username'); <span class="color-green">// username input</span>
+var elMsg = document.getElementById('feedback'); <span class="color-green">// element to hold message</span>
+
+el.addEventListener('focus', tipUsername, false); <span class="color-green">// focus call tipUsername()</span>
+el.addEventListener('blur', checkUsername, false); <span class="color-green">// blur call checkUsername()</span>
+                                    </pre>
+    </div>
+
+    <script src="../../JavaScript/popup-html-js-code.js"></script>
+    <script src="../../JavaScript/chp06/chp06-09.js"></script>
+
+</body>
+</html>
