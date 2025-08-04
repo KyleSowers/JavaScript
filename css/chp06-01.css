@@ -83,8 +83,50 @@ input[type='submit'] {
     background-image: url("../assets/images/chp06-tip.png");
 }
 
-div.note {
-    position: inherit;
+#note .header {
+    text-align: right;
+    background-color: #000;
+    border: none;
+    padding: 0 0 0 10px;
+}
+
+#note .header + div {
+    background: rgba(255, 255, 255, 1);
+    position: relative;
+    text-align: center;
+    top: 1px;
+    color: #d7666b;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #d7666b;
+}
+
+#note {
+    color: #fff;
+    background-color: #000;
+    opacity: 0.9;
+    box-shadow: -3px 3px 6px #000;
+    padding: 1em 1em 2em 1em;
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    top: 1em;
+    left: 0;
+}
+
+#note a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#h2-maintenance {
+    color: #d7666b;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    margin: 0 0 23px 0;
 }
 
 @media only screen and (min-width: 960px) {
