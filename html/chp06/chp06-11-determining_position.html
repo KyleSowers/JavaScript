@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/chp06-01.css">
+  <title>Determining Position</title>
+</head>
+<body id="body">
+<div id="stats">
+    " screenX: "
+    <input type="text" id="sx">
+    " screenY: "
+    <input type="text" id="sy">
+    <span class="divider">|</span>
+    " pageX: "
+    <input type="text" id="px">
+    " pageY: "
+    <input type="text" id="py">
+    <span class="divider">|</span>
+    " clientX: "
+    <input type="text" id="cx">
+    " clientY: "
+    <input type="text" id="cy">
+</div>
+<a class="button-link button-link-chp06-11" href="chp06-main.html">Chapter 6: Events</a>
+<div id="page">
+  <h1 id="header-chp06-11">List King</h1>
+  <h2>Buy groceries</h2>
+  <ul id="shoppingList">
+    <li class="liOrange"><a href="itemDone.php?id=1">
+      <em>fresh</em>
+      " figs"</a>
+    </li>
+    <li class="liOrange"><a href="#">pine nuts</a></li>
+    <li class="liOrange"><a href="#">honey</a></li>
+    <li class="liOrange"><a href="#">balsamic vinegar</a></li>
+    <li class="liOrange"><a href="#">linguine</a></li>
+    <li class="liOrange"><a href="#">cream</a></li>
+    <li class="liOrange"><a href="#">quinoa</a></li>
+    <li class="liOrange"><a href="#">sourdough bread</a></li>
+    <li class="liOrange"><a href="#">kale</a></li>
+    <li class="liOrange"><a href="#">almond milk</a></li>
+    <li class="liOrange"><a href="#">mushrooms</a></li>
+    <li class="liOrange"><a href="#">apples</a></li>
+    <li class="liOrange"><a href="#">strawberries</a></li>
+    <li class="liOrange"><a href="#">rice crackers</a></li>
+    <li class="liOrange"><a href="#">brie</a></li>
+    <li class="liOrange"><a href="#">rice</a></li>
+  </ul>
+</div>
+<!-- Display HTML to viewer to review -->
+<a class="button-link button-link-js" data-popup="#popup-1" href="javascript:void(0)">Show HTML</a>
+<!-- display on button click event -->
+<div class="js-popup" id="popup-1">
+                                <pre>
+&lt;div id="stats"&gt;
+    ' screenX '
+    &lt;input type="text" id="sx"&gt;
+    ' screenY '
+    &lt;input type="text" id="sy"&gt;
+    &lt;span class="divider"&gt;&lt;/span&gt;
+    ' pageX '
+    &lt;input type="text" id="px"&gt;
+    ' pageY '
+    &lt;input type="text" id="py"&gt;
+    &lt;span class="divider"&gt;&lt;/span&gt;
+    ' clintX '
+    &lt;input type="text" id="cx"&gt;
+    ' clintY '
+    &lt;input type="text" id="cy"&gt;
+    &lt;span class="divider"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div id="page"&gt;  <span class="color-green">// background container</span>
+    &lt;h1 id='header'&gt;List King&lt;/h1&gt;  <span class="color-green">// header image</span>
+    &lt;h2&gt;New Account&lt;/h2&gt;
+    &lt;ul id="shoppingList"&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;&lt;em&gt;fresh&lt;/em&gt; figs&lt;/a&gt; &lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;pine nuts&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;honey&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;balsamic vinegar&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;linguine&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;cream&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;quinoa&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;sourdough bread&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;kale&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;almond milk&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;mushrooms&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;apples&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;strawberries&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;rice crackers&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;brie&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="liOrange"&gt;&lt;a href="#"&gt;rice&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                                </pre>
+</div>
+<!-- Display JavaScript to viewer to review -->
+<a class="button-link button-link-js-2" data-popup="#popup-2" href="javascript:void(0)">Show JavaScript</a>
+<!-- display on button click event -->
+<div class="js-popup" id="popup-2">
+                            <pre>
+<span class="color-green">// Determining Position</span>
+
+var sx = document.getElementById('sx');  <span class="color-green">// element to hold screenX</span>
+var sy = document.getElementById('sy');  <span class="color-green">// element to hold screenY</span>
+var px = document.getElementById('px');  <span class="color-green">// element to hold pageX</span>
+var py = document.getElementById('py');  <span class="color-green">// element to hold pageY</span>
+var cx = document.getElementById('cx');  <span class="color-green">// element to hold clientX</span>
+var cy = document.getElementById('cy');  <span class="color-green">// element to hold clientY</span>
+
+
+function showPosition(event) {  <span class="color-green">// declare function</span>
+    sx.value = event.screenX;  <span class="color-green">// update element with screenX</span>
+    sy.value = event.screenY;  <span class="color-green">// update element with screenY</span>
+    px.value = event.pageX;  <span class="color-green">// update element with pageX</span>
+    py.value = event.pageY;  <span class="color-green">// update element with pageY</span>
+    cx.value = event.clientX;  <span class="color-green">// update element with clientX</span>
+    cy.value = event.clientY;  <span class="color-green">// update element with clientY</span>
+}
+
+var el = document.getElementById('body');  <span class="color-green">// get body element</span>
+e.addEventListener('mousemove', showPosition, false <span class="color-green">// move updates position</span>
+                                </pre>
+</div>
+
+<script src="../../JavaScript/popup-html-js-code.js"></script>
+<script src="../../JavaScript/chp06/chp-06-11.js"></script>
+
+</body>
+</html>
