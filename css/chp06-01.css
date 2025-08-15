@@ -334,6 +334,63 @@ input[type=text] {
     color: #6cc0ac;
 }
 
+/*ch06-13*/
+.selectbox {
+    display: inline;
+    margin: 0em;
+}
+
+/*chp06-13*/
+#packageHint, #termsHint {
+    color: #fff;
+    text-shadow: -1px 1px 2px #000;
+    background-image: url("../assets/images/chp06-hint.png");
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    padding-left: 22px;
+}
+
+#termsHint {
+    background-image: url("../assets/images/chp06-warning.png");
+}
+
+/*chp06-13*/
+#terms {
+    margin-top: 30px;
+}
+
+/*chp06-13*/
+ input[type="checkbox" i] {
+     background-color: initial;
+     cursor: default;
+     appearance: auto;
+     box-sizing: border-box;
+     margin: 3px 3px 3px 4px;
+     padding: initial;
+     border: initial;
+ }
+
+/* chp06-13*/
+.checkbox {
+    display: inline;
+    font-size: 16px;
+}
+
+/*chp06-13*/
+input[type='submit'] {
+    background-color: #cb6868;
+    color: #f3dad1;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-top: 10px;
+    float: right;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
 @media only screen and (min-width: 960px) {
     #page {
         max-width: 400px;
